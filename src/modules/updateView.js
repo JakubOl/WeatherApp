@@ -1,5 +1,6 @@
 import generateHtml from "./weatherHtml";
 import getWeather from "./getWeather";
+import { unit } from "./tempUnit";
 
 const search = document.querySelector(".search");
 const searchBox = document.querySelector(".search_box");
@@ -11,7 +12,7 @@ const getCity = () => {
 };
 
 const updateView = () => {
-  getWeather(getCity())
+  getWeather(getCity(), unit)
     .then((data) => {
       document.querySelector(".hero").innerHTML = generateHtml(data);
     })

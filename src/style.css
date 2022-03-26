@@ -15,7 +15,9 @@ html {
 .main {
   display: grid;
   height: 100vh;
+  max-width: 1200px;
   grid-template-rows: 80px 1fr auto;
+  margin: 0 auto;
 }
 section {
   height: 100%;
@@ -125,12 +127,15 @@ footer img {
   margin-left: 10px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .navbar {
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
     height: auto;
     padding: 10px;
+  }
+  .main {
+    grid-template-rows: auto 1fr auto;
   }
   .more_info {
     grid-template: 1fr 1fr 1fr/ 1fr 1fr;
