@@ -10,21 +10,28 @@
 
 html {
   font-family: fredoka, sans-serif;
-  font-size: 10px;
+  font-size: 15px;
 }
-body {
-  height: calc(100vh - 82px);
+.main {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 80px 1fr auto;
 }
 section {
   height: 100%;
-  background: url("./assets/david-marcu-78A265wPiO4-unsplash.jpg") no-repeat;
+  background: url("./assets/bg.jpg");
+  background-position: bottom;
   background-size: cover;
+}
+
+ul {
+  list-style-type: none;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 0 10px;
+  padding: 0 20px;
   height: 80px;
   align-items: center;
   border-bottom: 2px solid black;
@@ -43,6 +50,7 @@ section {
   padding: 5px 10px;
 }
 .search {
+  width: 100%;
   font-size: 1.5rem;
   border: none;
   background: transparent;
@@ -59,6 +67,8 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 3rem;
   font-size: 2rem;
   color: white;
   background: rgba(0, 0, 0, 0.4);
@@ -74,7 +84,7 @@ button {
 }
 .city_name {
   margin-top: 20px;
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 700;
 }
 .city_img {
@@ -87,19 +97,45 @@ button {
 .more_info {
   font-size: 1.3rem;
   display: grid;
-  grid-template: 1fr 1fr/ 1fr 1fr 1fr;
+  grid-template: 1fr 1fr/1fr 1fr 1fr;
   gap: 30px;
 }
 .details_value {
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 2rem;
+}
+.unit {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  padding: 10px;
+  cursor: pointer;
 }
 
-@media (max-width: 500px) {
+footer {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+footer img {
+  width: 25px;
+  margin-left: 10px;
+}
+
+@media (max-width: 600px) {
   .navbar {
     flex-direction: column;
     gap: 30px;
     height: auto;
     padding: 10px;
+  }
+  .more_info {
+    grid-template: 1fr 1fr 1fr/ 1fr 1fr;
+  }
+  .search_box {
+    width: 200px;
   }
 }
