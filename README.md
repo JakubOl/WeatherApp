@@ -1,2 +1,2 @@
 # WeatherApp
-Link: https://jukix.github.io/WeatherApp/
+Link: https://jakubol.github.io/WeatherApp/
